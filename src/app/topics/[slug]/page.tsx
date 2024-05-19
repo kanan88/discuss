@@ -1,5 +1,5 @@
 const TopicShowPage = () => {
-  return <div>TopicShowPage</div>;
+  return <div>Topic Show Page</div>;
 };
 
 export default TopicShowPage;
