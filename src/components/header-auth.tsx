@@ -2,7 +2,6 @@
 
 import {
   NavbarItem,
-  Input,
   Button,
   Avatar,
   Popover,
@@ -19,7 +18,7 @@ const HeaderAuth = () => {
 
   let authContent: React.ReactNode;
 
-  if (session.status === 'loading') {
+  if (session?.status === 'loading') {
     authContent = null;
   } else if (session.data?.user) {
     authContent = (
