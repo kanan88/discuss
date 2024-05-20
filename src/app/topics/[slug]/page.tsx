@@ -8,6 +8,7 @@ interface TopicShowPageProps {
 
 const TopicShowPage = ({ params }: TopicShowPageProps) => {
   const { slug } = params;
+
   return (
     <div className="grid grid-cols-4 gap-4 p-4">
       <div className="col-span-3">
@@ -15,7 +16,7 @@ const TopicShowPage = ({ params }: TopicShowPageProps) => {
       </div>
 
       <div>
-        <PostCreateForm />
+        <PostCreateForm slug={slug} />
       </div>
     </div>
   );
