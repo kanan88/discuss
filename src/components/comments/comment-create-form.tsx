@@ -25,7 +25,7 @@ export default function CommentCreateForm({
   );
 
   useEffect(() => {
-    if (formState?.success) {
+    if (formState.success) {
       ref.current?.reset();
 
       if (!startOpen) {
@@ -40,14 +40,15 @@ export default function CommentCreateForm({
         <Textarea
           name="content"
           label="Reply"
+          labelPlacement="inside"
           placeholder="Enter your comment"
-          isInvalid={!!formState?.errors.content}
-          errorMessage={formState?.errors.content?.join(', ')}
+          isInvalid={!!formState.errors.content}
+          errorMessage={formState.errors.content?.join(', ')}
         />
 
-        {formState?.errors._form ? (
+        {formState.errors._form ? (
           <div className="p-2 bg-red-200 border rounded border-red-400">
-            {formState?.errors._form?.join(', ')}
+            {formState.errors._form?.join(', ')}
           </div>
         ) : null}
 
